@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -13,11 +12,12 @@ Imports DevExpress.XtraRichEdit
 Namespace WindowsFormsApplication1
 	Partial Public Class Form1
 		Inherits RibbonForm
+
 		Public Sub New()
 			InitializeComponent()
 		End Sub
 
-		Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+		Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 			richEditControl1.LoadDocument("testDocument.rtf", DocumentFormat.Rtf)
 			UpdateButtonsVisibility(0)
 		End Sub

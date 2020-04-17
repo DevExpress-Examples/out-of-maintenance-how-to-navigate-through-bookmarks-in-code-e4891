@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Namespace WindowsFormsApplication1
+﻿Namespace WindowsFormsApplication1
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -79,7 +77,8 @@ Namespace WindowsFormsApplication1
 			Me.barButtonItemNext.Id = 231
 			Me.barButtonItemNext.LargeImageIndex = 1
 			Me.barButtonItemNext.Name = "barButtonItemNext"
-'			Me.barButtonItemNext.ItemClick += New DevExpress.XtraBars.ItemClickEventHandler(Me.barButtonItemNext_ItemClick);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.barButtonItemNext.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemNext_ItemClick);
 			' 
 			' barButtonItemPrev
 			' 
@@ -87,7 +86,8 @@ Namespace WindowsFormsApplication1
 			Me.barButtonItemPrev.Id = 232
 			Me.barButtonItemPrev.LargeImageIndex = 0
 			Me.barButtonItemPrev.Name = "barButtonItemPrev"
-'			Me.barButtonItemPrev.ItemClick += New DevExpress.XtraBars.ItemClickEventHandler(Me.barButtonItemPrev_ItemClick);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.barButtonItemPrev.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemPrev_ItemClick);
 			' 
 			' fileRibbonPage1
 			' 
@@ -191,7 +191,8 @@ Namespace WindowsFormsApplication1
 			Me.Name = "Form1"
 			Me.Ribbon = Me.ribbonControl1
 			Me.Text = "Form1"
-'			Me.Load += New System.EventHandler(Me.Form1_Load);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
 			CType(Me.ribbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(Me.richEditBarController1, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(Me.imageCollection1, System.ComponentModel.ISupportInitialize).EndInit()
