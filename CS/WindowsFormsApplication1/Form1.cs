@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1 {
         private void barButtonItemPrev_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
             int currentBookMarkIndex = GetCurrentBookMarkIndex(richEditControl1.Document);
             if(currentBookMarkIndex > 0) {
-                richEditControl1.Document.SelectBookmark(richEditControl1.Document.Bookmarks[currentBookMarkIndex - 1]);
+                richEditControl1.Document.Bookmarks.Select(richEditControl1.Document.Bookmarks[currentBookMarkIndex - 1]);
             }
             UpdateButtonsVisibility(currentBookMarkIndex - 1);
         }
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1 {
         private void barButtonItemNext_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
             int currentBookMarkIndex = GetCurrentBookMarkIndex(richEditControl1.Document);
             if(currentBookMarkIndex != -1 && currentBookMarkIndex < richEditControl1.Document.Bookmarks.Count - 1) {
-                richEditControl1.Document.SelectBookmark(richEditControl1.Document.Bookmarks[currentBookMarkIndex + 1]);
+                richEditControl1.Document.Bookmarks.Select(richEditControl1.Document.Bookmarks[currentBookMarkIndex + 1]);
             }
             UpdateButtonsVisibility(currentBookMarkIndex + 1);
         }

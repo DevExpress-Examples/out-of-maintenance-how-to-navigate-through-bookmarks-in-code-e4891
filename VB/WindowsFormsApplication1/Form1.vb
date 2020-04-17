@@ -34,7 +34,7 @@ Namespace WindowsFormsApplication1
 		Private Sub barButtonItemPrev_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles barButtonItemPrev.ItemClick
 			Dim currentBookMarkIndex As Integer = GetCurrentBookMarkIndex(richEditControl1.Document)
 			If currentBookMarkIndex > 0 Then
-				richEditControl1.Document.SelectBookmark(richEditControl1.Document.Bookmarks(currentBookMarkIndex - 1))
+				richEditControl1.Document.Bookmarks.Select(richEditControl1.Document.Bookmarks(currentBookMarkIndex - 1))
 			End If
 			UpdateButtonsVisibility(currentBookMarkIndex - 1)
 		End Sub
@@ -42,7 +42,7 @@ Namespace WindowsFormsApplication1
 		Private Sub barButtonItemNext_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles barButtonItemNext.ItemClick
 			Dim currentBookMarkIndex As Integer = GetCurrentBookMarkIndex(richEditControl1.Document)
 			If currentBookMarkIndex <> -1 AndAlso currentBookMarkIndex < richEditControl1.Document.Bookmarks.Count - 1 Then
-				richEditControl1.Document.SelectBookmark(richEditControl1.Document.Bookmarks(currentBookMarkIndex + 1))
+				richEditControl1.Document.Bookmarks.Select(richEditControl1.Document.Bookmarks(currentBookMarkIndex + 1))
 			End If
 			UpdateButtonsVisibility(currentBookMarkIndex + 1)
 		End Sub
